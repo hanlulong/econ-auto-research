@@ -1,21 +1,53 @@
 # Econ Auto Research
 
-**An economist-directed AI system that takes a research question all the way to a working paper — with the identification judgment, adversarial self-refereeing, and number provenance that economics demands.**
+**An economist-directed AI system that takes a research question all the way to a working paper — with the identification judgment, adversarial self-refereeing, and total number provenance that economics demands.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Status: vision](https://img.shields.io/badge/status-vision%20%E2%80%94%20seeking%20input-orange.svg)](#get-involved)
+[![Status](https://img.shields.io/badge/status-vision_%E2%80%94_seeking_input-orange.svg)](#get-involved)
+[![Ideas welcome](https://img.shields.io/badge/feature_requests-welcome-brightgreen.svg)](../../issues/new)
 
-> **This repository is at the vision stage.** There is no code here yet — there is a plan, a genuine gap, and a working toolchain to build on. If you want this to exist, [star the repo](#get-involved) and [tell us what to build first](#get-involved).
+> **This repository is at the vision stage** — there is no code here yet. There is a plan, a measured gap, and a shipping toolchain to build on. **If you want this to exist, [star the repo](#get-involved)** — stars decide how fast we build — **and [open an issue](../../issues/new) with the feature you'd want first.**
 
 ## The vision
 
-You bring the research question and the judgment calls. The system does the labor: it reads the literature, finds and prepares the data, proposes an identification strategy *and defends it*, runs the estimation and the robustness battery, drafts the paper, referees its own draft like a hostile top-five reviewer — and hands you a working paper in which every number is traceable to code and data.
+```text
+your question ──► literature ──► data ──► identification ──► pre-specified
+                                                              estimation
+                                                                  │
+   your sign-off ◄── working paper ◄── self-referee gate ◄── robustness
+```
 
-Not a chatbot that talks about economics. Not an ML agent that optimizes a leaderboard metric. A research pipeline that holds itself to the standard your referees will.
+You bring the research question and the judgment calls. The system does the labor: it reads the literature, finds and prepares the data, proposes an identification strategy *and defends it*, pre-registers the analysis, runs the estimation and the robustness battery, drafts the paper, and referees its own draft like a hostile top-five reviewer — before you ever see it.
+
+Not a chatbot that talks about economics. Not an ML agent that optimizes a leaderboard. A research pipeline that holds itself to the standard your referees will.
+
+## What it should feel like
+
+```text
+You:  Does broadband raise small-firm productivity? Municipal rollout
+      data is on the server. Aim at a field journal.
+
+Sys:  Read 47 papers. Identification memo ready: staggered DiD on
+      rollout timing. Two threats — endogenous timing, anticipation.
+      Proposing three designs; design B has the strongest defense.
+
+You:  Design B. Add the permutation placebo you mentioned.
+
+Sys:  Analysis pre-specified. Estimation done: +3.4% (headline),
+      robustness battery 14/14, full specification curve attached.
+      Referee gate raised 2 objections; 1 fixed, 1 needs your call:
+      the event-study pre-period drifts upward — flag or defend?
+
+You:  Flag it honestly. Show the drift in Figure 2.
+
+Sys:  Draft v1 ready. Every number traces to code, data, and seed.
+```
+
+The economist decides; the system labors; the referee gate never sleeps.
 
 ## Why this doesn't exist yet
 
-The auto-research wave is real, and none of it does economics. As of mid-2026:
+The auto-research wave is real — and none of it does economics. As of mid-2026:
 
 | System | ~Stars | What it does |
 |---|---:|---|
@@ -32,19 +64,21 @@ The economics-specific tools are early and narrow: method executors and simulati
 Three gaps are unclaimed, and they are exactly the hard parts of empirical economics:
 
 1. **Causal identification, not just estimation.** Existing agents can *run* a named method. None reasons about whether parallel trends hold, whether an instrument's exclusion restriction is credible, whether the RD is manipulated — and none *chooses and defends* a design. That judgment is what empirical economics is.
-2. **Referee-grade adversarial self-checking.** LLM reviewers under-detect methodological flaws and are gameable ([a 9,000-paper economics study](https://arxiv.org/abs/2502.00070) documents both). A system that attacks its own results — robustness, inference validity, external validity, provenance — before a human ever sees them is a real niche, and we have already built the referee (see below).
-3. **The measured autonomy gap.** In the most direct evidence to date ([Brodeur et al., *PNAS* 2026](https://www.pnas.org/doi/10.1073/pnas.2524747123) — 288 researchers, 103 teams in AI replication games), fully autonomous AI reproduced only ~37% of results, AI-led teams trailed human-only teams by ~57 percentage points, and humans caught more of the *critical* errors. Meanwhile the reproduction benchmarks that AI does well on ([~91% coefficient-sign agreement](https://arxiv.org/abs/2604.21965)) explicitly exclude identification, robustness, and referee judgment from scope. That is the gap this project exists to close — deliberately, with the economist in charge.
+2. **Referee-grade adversarial self-checking.** LLM reviewers under-detect methodological flaws and are gameable ([a 9,000-paper economics study](https://arxiv.org/abs/2502.00070) documents both). A system that attacks its own results — robustness, inference validity, external validity, provenance — before a human ever sees them is a real niche. We have already built that referee (see below).
+3. **The measured autonomy gap.** In the most direct evidence to date ([Brodeur et al., *PNAS* 2026](https://doi.org/10.1073/pnas.2524747123) — 288 researchers, 103 teams in AI replication games), fully autonomous AI reproduced only ~37% of results, AI-led teams trailed human-only teams by ~57 percentage points, and humans caught more of the *critical* errors. The reproduction tasks AI already does well ([~91% coefficient-sign agreement](https://arxiv.org/abs/2604.21965)) explicitly exclude identification, robustness, and referee judgment. That measured gap is what this project exists to close — deliberately, with the economist in charge.
 
 ## What "economics-grade" means here
 
-The failure modes of the first auto-research wave are well documented: fabricated results, hallucinated citations, low-novelty "slop", specification search at machine speed, and agents gaming their own reviewers. This project treats those as design constraints, not footnotes:
+The failure modes of the first auto-research wave are well documented: fabricated results, hallucinated citations, low-novelty "slop", specification search at machine speed, agents gaming their own reviewers. This project treats them as design constraints, not footnotes:
 
-- **Economist-directed by design.** You own the question, the interpretation, and the sign-off. The system owns the labor. Autonomy grows only as verification does.
-- **Identification first.** The design conversation (what varies, what's assumed, what would break it) happens before any regression runs — and is documented in the paper.
-- **Adversarial self-refereeing.** Every result passes through a referee-report gate before it reaches you — the same technology as [econ-paper-review-skill](https://github.com/hanlulong/econ-paper-review-skill), which already writes verified, evidence-anchored referee reports.
-- **Total number provenance.** Every coefficient in the draft traces to code, data, and seed. No traceability, no claim.
-- **Pre-specification over specification search.** Analysis plans are declared before estimation; the full specification curve is reported, not the flattering corner of it.
-- **Bounded, sandboxed autonomy.** Agents run in controlled environments with explicit budgets — no self-modifying pipelines.
+| Commitment | What it rules out |
+|---|---|
+| **Economist-directed by design** — you own the question, interpretation, and sign-off | Unsupervised paper mills; "AI slop" |
+| **Identification first** — the design is chosen and defended before any regression runs | Method-execution without judgment |
+| **Adversarial self-refereeing** — every result passes a referee-report gate ([the referee already ships](https://github.com/hanlulong/econ-paper-review-skill)) | Results no one attacked before you saw them |
+| **Total number provenance** — every coefficient traces to code, data, and seed | Fabricated or drifted numbers |
+| **Pre-specification + full specification curve** | p-hacking at machine speed |
+| **Bounded, sandboxed autonomy** with explicit budgets | Self-modifying pipelines |
 
 ## The building blocks already exist
 
@@ -58,21 +92,28 @@ This is the capstone of the [OpenEcon](https://openecon.ai) toolchain, not a col
 | [stata-mcp](https://github.com/hanlulong/stata-mcp) | shipping | The estimation engine: agents running real Stata workflows |
 | **econ-auto-research** | **this vision** | The pipeline that connects them: literature → data → identification → estimation → draft → self-referee |
 
-## Roadmap (subject to your input)
+## Roadmap (ordered by demand — that's where you come in)
 
-1. **Now — vision and priorities.** Collect use cases and feature requests from researchers (that's this README).
-2. **Replication and robustness audits.** The credibility-first entry point: given a published paper and its replication package, reproduce it, audit the identification, and run the robustness battery — measured against the public replication benchmarks.
-3. **The economist-directed empirical pipeline.** Question + data in; design proposal, pre-specified analysis, estimates, and a referee-checked results section out.
+1. **Now — vision and priorities.** Collect use cases and feature requests from researchers. *(You are here.)*
+2. **Replication and robustness audits.** The credibility-first entry point: given a published paper and its replication package, reproduce it, audit the identification, run the robustness battery — measured against the public replication benchmarks, not our own grading.
+3. **The economist-directed empirical pipeline.** Question + data in; defended design, pre-specified analysis, estimates, and a referee-checked results section out.
 4. **End-to-end working papers.** The full loop — literature to draft — behind the self-refereeing gate, with the economist approving each stage.
 
 ## Get involved
 
-This project will be built in the open, and the order of work will follow demand:
+Built in the open; the order of work follows demand.
 
 - **⭐ Star this repo** if you want it to exist — stars are how we gauge whether to accelerate.
-- **[Open an issue](../../issues/new)** describing the feature you'd want first: What task would you hand off tomorrow — literature triage? data cleaning? the robustness battery? a replication audit? Which data sources and stacks matter to you (Stata, R, Python)? What would make you trust — or refuse to trust — an AI-assisted result?
-- Watch the repo for the first working milestone.
+- **[Open an issue](../../issues/new)** with the feature you'd want first. Good prompts:
+  - What task would you hand off tomorrow — literature triage, data cleaning, the robustness battery, a replication audit?
+  - Which data sources and stacks matter to you (Stata, R, Python)?
+  - What would make you trust — or refuse to trust — an AI-assisted result?
+- **Watch** the repo to catch the first working milestone.
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+*Economists spend most of their research hours on labor that isn't economics. The judgment is the job; the rest should be delegable — to a system that referees itself before it reports to you. If that's the tool you want, star the repo and tell us what to build first.*
