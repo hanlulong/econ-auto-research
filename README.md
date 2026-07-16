@@ -86,10 +86,10 @@ This is the capstone of the [OpenEcon](https://openecon.ai) toolchain, not a col
 
 | Piece | Status | Role here |
 |---|---|---|
-| [econ-paper-review-skill](https://github.com/hanlulong/econ-paper-review-skill) | shipping | The adversarial referee: verified reports, evidence anchors, revision plans |
-| [econ-writing-skill](https://github.com/hanlulong/econ-writing-skill) | shipping | The writing craft of 50+ guides by leading economists |
-| [econ-slides-skill](https://github.com/hanlulong/econ-slides-skill) | shipping | The talk: professional decks and speaker scripts from a paper |
-| [stata-mcp](https://github.com/hanlulong/stata-mcp) | shipping | The estimation engine: agents running real Stata workflows |
+| [econ-paper-review-skill](https://github.com/hanlulong/econ-paper-review-skill) | shipped | The adversarial referee: verified reports, evidence anchors, revision plans |
+| [econ-writing-skill](https://github.com/hanlulong/econ-writing-skill) | shipped | The writing craft of 50+ guides by leading economists |
+| [econ-slides-skill](https://github.com/hanlulong/econ-slides-skill) | shipped | The talk: professional decks and speaker scripts from a paper |
+| [stata-mcp](https://github.com/hanlulong/stata-mcp) | shipped | The estimation engine: agents running real Stata workflows |
 | **econ-auto-research** | **this vision** | The pipeline that connects them: literature → data → identification → estimation → draft → self-referee |
 
 ## Roadmap (ordered by demand — that's where you come in)
