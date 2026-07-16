@@ -67,7 +67,7 @@ Three gaps are unclaimed, and they are exactly the hard parts of empirical econo
 2. **Referee-grade adversarial self-checking.** LLM reviewers under-detect methodological flaws and are gameable ([a 9,000-paper economics study](https://arxiv.org/abs/2502.00070) documents both). A system that attacks its own results — robustness, inference validity, external validity, provenance — before a human ever sees them is a real niche. We have already built that referee (see below).
 3. **The measured autonomy gap.** In the most direct evidence to date ([Brodeur et al., *PNAS* 2026](https://doi.org/10.1073/pnas.2524747123) — 288 researchers, 103 teams in AI replication games), fully autonomous AI reproduced only ~37% of results, AI-led teams trailed human-only teams by ~57 percentage points, and humans caught more of the *critical* errors. The reproduction tasks AI already does well ([~91% coefficient-sign agreement](https://arxiv.org/abs/2604.21965)) explicitly exclude identification, robustness, and referee judgment. That measured gap is what this project exists to close — deliberately, with the economist in charge.
 
-## Built to the referee's standard
+## How it will earn your trust
 
 The failure modes of the first auto-research wave are well documented: fabricated results, hallucinated citations, low-novelty "slop", specification search at machine speed, agents gaming their own reviewers. This project treats them as design constraints, not footnotes:
 
