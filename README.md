@@ -93,7 +93,7 @@ The failure modes of the first auto-research wave are well documented: fabricate
 | **Pre-specification + full specification curve** | p-hacking at machine speed |
 | **Bounded, sandboxed autonomy** with explicit budgets | Self-modifying pipelines ([as the AI Scientist attempted](https://sakana.ai/ai-scientist/)) |
 
-## The building blocks already exist
+## Most of the building blocks already exist
 
 This is the capstone of the [OpenEcon](https://openecon.ai) toolchain, not a cold start:
 
@@ -107,6 +107,8 @@ This is the capstone of the [OpenEcon](https://openecon.ai) toolchain, not a col
 | **econ-auto-research** | **this vision** | MIT | The pipeline that connects them: literature → data → identification → estimation → draft → self-referee |
 
 Not yet covered by a shipped block: literature search and identification. That is the new work here.
+
+This repository's MIT license covers its own code. Each building block keeps its own license and is meant to be installed and used as a separate tool.
 
 ## Roadmap (ordered by demand — that's where you come in)
 
