@@ -7,3 +7,5 @@ This repository is at the vision stage: there is no code here yet. What helps mo
 - **What would break your trust.** Describe a failure that would make you refuse an AI-assisted result.
 
 Please do not post a confidential manuscript, unpublished data, or anything covered by a data-use agreement. Describe the task instead.
+
+By contributing you agree that your contribution is licensed under the [MIT License](LICENSE).
