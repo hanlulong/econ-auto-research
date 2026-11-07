@@ -4,10 +4,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-vision_%E2%80%94_seeking_input-orange.svg)](#get-involved)
-[![Ideas welcome](https://img.shields.io/badge/feature_requests-welcome-brightgreen.svg)](../../issues/new)
-[![GitHub stars](https://img.shields.io/github/stars/hanlulong/econ-auto-research?style=social)](../../stargazers)
+[![Ideas welcome](https://img.shields.io/badge/feature_requests-welcome-brightgreen.svg)](https://github.com/hanlulong/econ-auto-research/issues/new?template=use-case.yml)
+[![GitHub stars](https://img.shields.io/github/stars/hanlulong/econ-auto-research?style=social)](https://github.com/hanlulong/econ-auto-research/stargazers)
 
-> **This repository is at the vision stage** — there is no code here yet. There is a plan, a measured gap, and a released toolchain to build on. **If you want this to exist, click ⭐ Star at the top of this page** — stars decide how fast we build — **and [open an issue](../../issues/new) with the feature you'd want first.**
+> **This repository is at the vision stage** — there is no code here yet. There is a plan, a measured gap, and a released toolchain to build on. **If you want this to exist, click ⭐ Star at the top of this page** — stars decide how fast we build — **and [open an issue](https://github.com/hanlulong/econ-auto-research/issues/new?template=use-case.yml) with the feature you'd want first.**
 
 ## The vision
 
@@ -110,7 +110,7 @@ Not yet covered by a shipped block: literature search and identification. That i
 Built in the open; the order of work follows demand.
 
 - **⭐ Star this repo** (the Star button at the top right of this page) if you want it to exist — stars are how we gauge whether to accelerate.
-- **[Open an issue](../../issues/new)** with the feature you'd want first. Good prompts:
+- **[Open an issue](https://github.com/hanlulong/econ-auto-research/issues/new?template=use-case.yml)** with the feature you'd want first. Good prompts:
   - What task would you hand off tomorrow — literature triage, data cleaning, the robustness battery, a replication audit?
   - Which data sources and stacks matter to you (Stata, R, Python)?
   - What would make you trust — or refuse to trust — an AI-assisted result?
