@@ -52,11 +52,12 @@ The auto-research wave is real, and it has now reached economics. The general-pu
 
 | System | ~Stars | What it does |
 |---|---:|---|
-| [STORM](https://github.com/stanford-oval/storm) | 30k | Topic → cited Wikipedia-style report. No data, no experiments. |
-| [GPT-Researcher](https://github.com/assafelovic/gpt-researcher) | 28k | Autonomous web research → cited report. No empirics. |
-| [AI-Scientist](https://github.com/SakanaAI/AI-Scientist) / [v2](https://github.com/SakanaAI/AI-Scientist-v2) | 14k / 7k | ML idea→experiment→paper→self-review. Independent evaluations found failed experiments and hallucinated numbers. |
-| [RD-Agent](https://github.com/microsoft/RD-Agent) | 14k | Automates the ML R&D loop. Not a paper-writer. |
-| [PaperQA2](https://github.com/Future-House/paper-qa) | 9k | High-accuracy RAG over scientific PDFs. Reading, not researching. |
+| [autoresearch](https://github.com/karpathy/autoresearch) | 99k | Agent loop for ML training code: edit, train for a fixed 5 minutes, keep or discard against a fixed metric. ML only; no paper. |
+| [STORM](https://github.com/stanford-oval/storm) | 32k | Topic → cited Wikipedia-style report. No data, no experiments. |
+| [GPT-Researcher](https://github.com/assafelovic/gpt-researcher) | 31k | Autonomous web research → cited report. No empirics. |
+| [AI-Scientist](https://github.com/SakanaAI/AI-Scientist) / [v2](https://github.com/SakanaAI/AI-Scientist-v2) | 15k / 7.5k | ML idea→experiment→paper→self-review; in [*Nature* 2026](https://www.nature.com/articles/s41586-026-10265-5). [Independent evaluations](https://arxiv.org/abs/2502.14297) found failed experiments and hallucinated numbers. |
+| [RD-Agent](https://github.com/microsoft/RD-Agent) | 15k | Automates the ML R&D loop. Not a paper-writer. |
+| [PaperQA2](https://github.com/Future-House/paper-qa) | 10k | High-accuracy RAG over scientific PDFs. Reading, not researching. |
 | [AgentLaboratory](https://github.com/SamuelSchmidgall/AgentLaboratory) | 6k | Human-in-loop lit→experiment→LaTeX for ML. |
 | [data-to-paper](https://github.com/Technion-Kishony-lab/data-to-paper) | 0.8k | Data→paper with backward-traceable numbers — the right provenance idea, not built for causal inference. |
 
