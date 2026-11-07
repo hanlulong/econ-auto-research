@@ -48,7 +48,7 @@ The economist decides; the system labors; the referee gate never sleeps.
 
 ## Why this doesn't exist yet
 
-The auto-research wave is real — and none of it does economics. As of mid-2026:
+The auto-research wave is real, and it has now reached economics. The general-purpose systems, as of November 2026:
 
 | System | ~Stars | What it does |
 |---|---:|---|
@@ -60,11 +60,11 @@ The auto-research wave is real — and none of it does economics. As of mid-2026
 | [AgentLaboratory](https://github.com/SamuelSchmidgall/AgentLaboratory) | 6k | Human-in-loop lit→experiment→LaTeX for ML. |
 | [data-to-paper](https://github.com/Technion-Kishony-lab/data-to-paper) | 0.8k | Data→paper with backward-traceable numbers — the right provenance idea, not built for causal inference. |
 
-The economics-specific tools are early and narrow: method executors and simulation agents, a few hundred stars each. The canonical reference — [Korinek's *AI Agents for Economic Research* (NBER w34202)](https://www.nber.org/papers/w34202) — explicitly frames today's agents as assistants under human oversight, not autonomous researchers.
+Economics-specific systems now exist too, from method executors and simulation agents to end-to-end pipelines: [Project APE](https://ape.socialcatalystlab.org) generated about 1,000 policy-evaluation papers from January to April 2026 with a research loop that ran without human input, and [awesome-ai-for-economists](https://github.com/hanlulong/awesome-ai-for-economists) tracks the rest. The canonical reference — [Korinek's *AI Agents for Economic Research* (NBER w34202)](https://www.nber.org/papers/w34202) — explicitly frames today's agents as assistants under human oversight, not autonomous researchers.
 
-Three gaps are unclaimed, and they are exactly the hard parts of empirical economics:
+Three hard parts of empirical economics are where this project aims to go further:
 
-1. **Causal identification, not just estimation.** Existing agents can *run* a named method. None reasons about whether parallel trends hold, whether an instrument's exclusion restriction is credible, whether the RD is manipulated — and none *chooses and defends* a design. That judgment is what empirical economics is.
+1. **Causal identification, not just estimation.** Some economics agents now seek out and state identification strategies.[^ident] This project is meant to choose a design and defend it against a dedicated attack on its assumptions — parallel trends, exclusion restrictions, RD manipulation. That judgment is what empirical economics is.
 2. **Referee-grade adversarial self-checking.** LLM reviewers under-detect methodological flaws and are gameable ([a 9,000-paper economics study](https://arxiv.org/abs/2502.00070) documents both). A system that attacks its own results — robustness, inference validity, external validity, provenance — before a human ever sees them is a real niche. We have already built that referee (see below).
 3. **The measured autonomy gap.** In the most direct evidence to date ([Brodeur et al., *PNAS* 2026](https://doi.org/10.1073/pnas.2524747123) — 288 researchers, 103 teams in AI replication games), fully autonomous AI reproduced only ~37% of results, AI-led teams trailed human-only teams by ~57 percentage points, and humans caught more of the *critical* errors. The reproduction tasks AI already does well ([~91% coefficient-sign agreement](https://arxiv.org/abs/2604.21965)) explicitly exclude identification, robustness, and referee judgment. That measured gap is what this project exists to close — deliberately, with the economist in charge.
 
@@ -118,3 +118,5 @@ MIT — see [LICENSE](LICENSE).
 ---
 
 *Economists spend most of their research hours on labor that isn't economics. The judgment is the job; the rest should be delegable — to a system that referees itself before it reports to you. If that's the tool you want, star the repo and tell us what to build first.*
+
+[^ident]: Project APE's agents "Identify policy questions with credible identification strategies" ([APE README](https://github.com/SocialCatalystLab/ape-papers)); in Agentic Econ Lab, "agents state identification strategies for causal claims" (Dawid et al., [arXiv 2504.09736](https://arxiv.org/abs/2504.09736)).
