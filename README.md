@@ -87,13 +87,16 @@ The failure modes of the first auto-research wave are well documented: fabricate
 
 This is the capstone of the [OpenEcon](https://openecon.ai) toolchain, not a cold start:
 
-| Piece | Status | Role here |
-|---|---|---|
-| [econ-paper-review-skill](https://github.com/hanlulong/econ-paper-review-skill) | shipped | The adversarial referee: verified reports, evidence anchors, revision plans |
-| [econ-writing-skill](https://github.com/hanlulong/econ-writing-skill) | shipped | The writing craft of 50+ guides by leading economists |
-| [econ-slides-skill](https://github.com/hanlulong/econ-slides-skill) | shipped | The talk: professional decks and speaker scripts from a paper |
-| [stata-mcp](https://github.com/hanlulong/stata-mcp) | shipped | The estimation engine: agents running real Stata workflows |
-| **econ-auto-research** | **this vision** | The pipeline that connects them: literature → data → identification → estimation → draft → self-referee |
+| Piece | Status | License | Role here |
+|---|---|---|---|
+| [econ-paper-review-skill](https://github.com/hanlulong/econ-paper-review-skill) | shipped | PolyForm Noncommercial 1.0.0 | The adversarial referee: verified reports, evidence anchors, revision plans |
+| [econ-writing-skill](https://github.com/hanlulong/econ-writing-skill) | shipped | MIT | The writing craft of 50+ guides by leading economists |
+| [econ-slides-skill](https://github.com/hanlulong/econ-slides-skill) | shipped | MIT | The talk: professional decks and speaker scripts from a paper |
+| [openecon-data](https://github.com/hanlulong/openecon-data) | shipped | AGPL-3.0 | The public data layer: aggregate series (FRED, World Bank, IMF, Eurostat and more) for outcomes, controls and context — not your own microdata |
+| [stata-mcp](https://github.com/hanlulong/stata-mcp) | shipped | MIT | The estimation engine: agents running real Stata workflows |
+| **econ-auto-research** | **this vision** | MIT | The pipeline that connects them: literature → data → identification → estimation → draft → self-referee |
+
+Not yet covered by a shipped block: literature search and identification. That is the new work here.
 
 ## Roadmap (ordered by demand — that's where you come in)
 
