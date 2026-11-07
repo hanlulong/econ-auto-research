@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/status-vision_%E2%80%94_seeking_input-orange.svg)](#get-involved)
 [![Ideas welcome](https://img.shields.io/badge/feature_requests-welcome-brightgreen.svg)](https://github.com/hanlulong/econ-auto-research/issues/new?template=use-case.yml)
-[![GitHub stars](https://img.shields.io/github/stars/hanlulong/econ-auto-research?style=social)](https://github.com/hanlulong/econ-auto-research/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/hanlulong/econ-auto-research?style=social)](https://github.com/hanlulong/econ-auto-research)
 
 > **This repository is at the vision stage** — there is no code here yet. There is a plan, a measured gap, and a released toolchain to build on. **If you want this to exist, click ⭐ Star at the top of this page** — stars decide how fast we build — **and [open an issue](https://github.com/hanlulong/econ-auto-research/issues/new?template=use-case.yml) with the feature you'd want first.**
 
