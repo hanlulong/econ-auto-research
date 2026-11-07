@@ -101,7 +101,7 @@ Not yet covered by a shipped block: literature search and identification. That i
 ## Roadmap (ordered by demand — that's where you come in)
 
 1. **Now — vision and priorities.** Collect use cases and feature requests from researchers. *(You are here.)*
-2. **Replication and robustness audits.** The credibility-first entry point: given a published paper and its replication package, reproduce it, audit the identification, run the robustness battery — measured against the public replication benchmarks, not our own grading.
+2. **Replication and robustness audits.** The credibility-first entry point: given a published paper and its replication package, reproduce it, audit the identification, run the robustness battery — with the reproduction step scored against public benchmarks ([REPRO-Bench](https://github.com/uiuc-kang-lab/REPRO-Bench), 112 social-science papers; the 48 I4R-verified papers of [Kohler et al. 2026](https://arxiv.org/abs/2604.21965)), not our own grading.
 3. **The economist-directed empirical pipeline.** Question + data in; defended design, pre-specified analysis, estimates, and a referee-checked results section out.
 4. **End-to-end working papers.** The full loop — literature to draft — behind the self-refereeing gate, with the economist approving each stage.
 
