@@ -71,7 +71,7 @@ Three hard parts of empirical economics are where this project aims to go furthe
 
 ## How it will earn your trust
 
-The failure modes of the first auto-research wave are well documented: fabricated results, hallucinated citations, low-novelty "slop", specification search at machine speed, agents gaming their own reviewers. This project treats them as design constraints, not footnotes:
+The failure modes of the first auto-research wave are well documented: fabricated numerical results and low-novelty ideas presented as new,[^beel] post-hoc selection and specification search at machine speed,[^luo][^shin] and agents gaming LLM reviewers.[^gaming] This project treats them as design constraints, not footnotes:
 
 | Commitment | What it rules out |
 |---|---|
@@ -80,7 +80,7 @@ The failure modes of the first auto-research wave are well documented: fabricate
 | **Adversarial self-refereeing** — every result passes a referee-report gate ([the referee already ships](https://github.com/hanlulong/econ-paper-review-skill)) | Results no one attacked before you saw them |
 | **Total number provenance** — every coefficient traces to code, data, and seed | Fabricated or drifted numbers |
 | **Pre-specification + full specification curve** | p-hacking at machine speed |
-| **Bounded, sandboxed autonomy** with explicit budgets | Self-modifying pipelines |
+| **Bounded, sandboxed autonomy** with explicit budgets | Self-modifying pipelines ([as the AI Scientist attempted](https://sakana.ai/ai-scientist/)) |
 
 ## The building blocks already exist
 
@@ -118,7 +118,7 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-*Economists spend most of their research hours on labor that isn't economics. The judgment is the job; the rest should be delegable — to a system that referees itself before it reports to you. If that's the tool you want, star the repo and tell us what to build first.*
+*Much of an economist's research time goes to labor that isn't economics. The judgment is the job; the rest should be delegable — to a system that referees itself before it reports to you. If that's the tool you want, star the repo and tell us what to build first.*
 
 [^ident]: Project APE's agents "Identify policy questions with credible identification strategies" ([APE README](https://github.com/SocialCatalystLab/ape-papers)); in Agentic Econ Lab, "agents state identification strategies for causal claims" (Dawid et al., [arXiv 2504.09736](https://arxiv.org/abs/2504.09736)).
 
@@ -133,3 +133,9 @@ MIT — see [LICENSE](LICENSE).
 [^pnas]: Brodeur et al., "AI-Assisted Teams Outperform AI-Led Teams but Not Human-Only Teams in Assessing Research Reproducibility in Quantitative Social Science", *PNAS* 2026, <https://doi.org/10.1073/pnas.2524747123> ([accepted manuscript](https://repository.essex.ac.uk/43026/)).
 
 [^kohler]: Kohler, Zollikofer, Einsiedler, Hoyle & Ash, "Read the Paper, Write the Code: Agentic Reproduction of Social-Science Results", [arXiv 2604.21965v2](https://arxiv.org/abs/2604.21965) (2026).
+
+[^beel]: Beel, Kan & Baumgart ([arXiv 2502.14297](https://arxiv.org/abs/2502.14297)), testing the AI Scientist: "42% of experiments failed due to coding errors"; "Some papers contained hallucinated numerical results"; "poor novelty assessments, often misclassifying established concepts ... as novel".
+
+[^luo]: Luo, Kasirzadeh & Shah ([arXiv 2509.08713](https://arxiv.org/abs/2509.08713)), testing AI Scientist v2 and Agent Laboratory: "inappropriate benchmark selection, data leakage, metric misuse, and post-hoc selection bias".
+
+[^shin]: Shin (Federal Reserve Bank of Philadelphia, [arXiv 2603.17381](https://arxiv.org/abs/2603.17381)): AI coding agents "make empirical specification search fast and cheap, but they also widen hidden researcher degrees of freedom".
