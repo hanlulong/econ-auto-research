@@ -106,7 +106,7 @@ This is the capstone of the [OpenEcon](https://openecon.ai) toolchain, not a col
 | [stata-mcp](https://github.com/hanlulong/stata-mcp) | shipped | MIT | The estimation engine: agents running real Stata workflows |
 | **econ-auto-research** | **this vision** | MIT | The pipeline that connects them: literature → data → identification → estimation → draft → self-referee |
 
-Not yet covered by a shipped block: literature search and identification. That is the new work here.
+Not yet covered by a shipped block: the literature review for a new question, and choosing and defending the design. That is the new work here.
 
 This repository's MIT license covers its own code. Each building block keeps its own license and is meant to be installed and used as a separate tool.
 
