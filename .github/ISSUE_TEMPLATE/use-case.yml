@@ -1,0 +1,35 @@
+name: Use case or feature request
+description: What you would hand off first, and what would make you trust the result.
+title: "[Use case] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please do not post a confidential manuscript, unpublished data, or anything covered by a data-use agreement. Describe the task instead.
+  - type: dropdown
+    id: first-task
+    attributes:
+      label: Which task would you hand off first?
+      options:
+        - Literature triage
+        - Data cleaning
+        - Robustness battery
+        - Replication audit
+        - Other (say below)
+  - type: checkboxes
+    id: stack
+    attributes:
+      label: Your stack
+      options:
+        - label: Stata
+        - label: R
+        - label: Python
+        - label: Other
+  - type: textarea
+    id: trust
+    attributes:
+      label: What would make you trust, or refuse to trust, an AI-assisted result?
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: "Anything else: data sources, field, or a public replication package you would nominate for roadmap step 2"
