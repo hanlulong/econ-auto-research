@@ -90,7 +90,7 @@ The failure modes of the first auto-research wave are well documented: fabricate
 | **Identification first** — the design is chosen and defended before any regression runs | Method-execution without judgment |
 | **Adversarial self-refereeing** — every result passes a referee-report gate ([the referee already ships](https://github.com/hanlulong/econ-paper-review-skill)) | Results no one attacked before you saw them |
 | **Total number provenance** — every coefficient traces to code, data, and seed | Fabricated or drifted numbers |
-| **Pre-specification + full specification curve** | p-hacking at machine speed |
+| **Pre-specification + full specification curve** — a hashed, timestamped analysis plan bound to this question, data hash and code commit, fixed before estimation on the outcome and re-checked at the draft and referee gates; deviations are logged and shown | p-hacking at machine speed |
 | **Bounded, sandboxed autonomy** with explicit budgets | Self-modifying pipelines ([as the AI Scientist attempted](https://sakana.ai/ai-scientist/)) |
 
 ## Most of the building blocks already exist
