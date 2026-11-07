@@ -13,7 +13,7 @@
 
 ```text
 your question ──► literature ──► data ──► identification ──► pre-specified
-                                                              estimation
+                                          (your call)         estimation
                                                                   │
    your sign-off ◄── working paper ◄── self-referee gate ◄── robustness
 ```
@@ -29,13 +29,14 @@ You:  Does broadband raise small-firm productivity? Municipal rollout
       data is on the server. Aim at a field journal.
 
 Sys:  Read 47 papers. Identification memo ready: staggered DiD on
-      rollout timing. Two threats — endogenous timing, anticipation.
+      rollout timing, heterogeneity-robust estimator. Two threats —
+      endogenous timing, anticipation.
       Proposing three designs; design B has the strongest defense.
 
 You:  Design B. Add the permutation placebo you mentioned.
 
 Sys:  Analysis pre-specified. Estimation done: +3.4% (headline),
-      robustness battery 14/14, full specification curve attached.
+      14 robustness checks run, full specification curve attached.
       Referee gate raised 2 objections; 1 fixed, 1 needs your call:
       the event-study pre-period drifts upward — flag or defend?
 
