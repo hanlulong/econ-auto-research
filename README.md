@@ -18,7 +18,7 @@ your question ──► literature ──► data ──► identification ─�
    your sign-off ◄── working paper ◄── self-referee gate ◄── robustness
 ```
 
-You bring the research question and the judgment calls. The system does the labor: it reads the literature, finds and prepares the data, proposes an identification strategy *and defends it*, pre-registers the analysis, runs the estimation and the robustness battery, drafts the paper, and referees its own draft like a hostile top-five reviewer — before you ever see it.
+You bring the research question and the judgment calls. The system does the labor: it reads the literature, finds and prepares the data, proposes an identification strategy *and defends it*, pre-specifies the analysis, runs the estimation and the robustness battery, drafts the paper, and referees its own draft like a hostile top-five reviewer — before you ever see it.
 
 Not a chatbot that talks about economics. Not an ML agent that optimizes a leaderboard. A research pipeline that holds itself to the standard your referees will.
 
@@ -73,7 +73,7 @@ Three hard parts of empirical economics are where this project aims to go furthe
 
 The failure modes of the first auto-research wave are well documented: fabricated numerical results and low-novelty ideas presented as new,[^beel] post-hoc selection and specification search at machine speed,[^luo][^shin] and agents gaming LLM reviewers.[^gaming] This project treats them as design constraints, not footnotes:
 
-| Commitment | What it rules out |
+| Commitment | What it guards against |
 |---|---|
 | **Economist-directed by design** — you own the question, interpretation, and sign-off | Unsupervised paper mills; "AI slop" |
 | **Identification first** — the design is chosen and defended before any regression runs | Method-execution without judgment |
