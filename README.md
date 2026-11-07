@@ -86,7 +86,7 @@ The failure modes of the first auto-research wave are well documented: fabricate
 
 | Commitment | What it guards against |
 |---|---|
-| **Economist-directed by design** — you own the question, interpretation, and sign-off | Unsupervised paper mills; "AI slop" |
+| **Economist-directed by design** — you own the question, interpretation, and sign-off[^li] | Unsupervised paper mills; "AI slop" |
 | **Identification first** — the design is chosen and defended before any regression runs | Method-execution without judgment |
 | **Adversarial self-refereeing** — every result passes a referee-report gate ([the referee already ships](https://github.com/hanlulong/econ-paper-review-skill)) | Results no one attacked before you saw them |
 | **Total number provenance** — every coefficient traces to code, data, and seed | Fabricated or drifted numbers |
@@ -155,3 +155,5 @@ MIT — see [LICENSE](LICENSE).
 [^luo]: Luo, Kasirzadeh & Shah ([arXiv 2509.08713](https://arxiv.org/abs/2509.08713)), testing AI Scientist v2 and Agent Laboratory: "inappropriate benchmark selection, data leakage, metric misuse, and post-hoc selection bias".
 
 [^shin]: Shin (Federal Reserve Bank of Philadelphia, [arXiv 2603.17381](https://arxiv.org/abs/2603.17381)): AI coding agents "make empirical specification search fast and cheap, but they also widen hidden researcher degrees of freedom".
+
+[^li]: Using LLM judges, Li (2026, [arXiv 2604.03338v1](https://arxiv.org/abs/2604.03338)) attributes about 71% of the quality gap between 912 APE papers and 41 AER/AEJ: Policy papers to the idea rather than the execution; ideation is the step this design leaves to the economist.
