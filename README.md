@@ -47,7 +47,7 @@ Sys:  Draft v1 ready. Every number traces to code, data, and seed.
 
 The economist decides; the system labors; the referee gate never sleeps.
 
-## Why this doesn't exist yet
+## What exists, and what is still missing
 
 The auto-research wave is real, and it has now reached economics. The general-purpose systems, as of November 2026:
 
@@ -64,10 +64,20 @@ The auto-research wave is real, and it has now reached economics. The general-pu
 
 Economics-specific systems now exist too, from method executors and simulation agents to end-to-end pipelines: [Project APE](https://ape.socialcatalystlab.org) generated about 1,000 policy-evaluation papers from January to April 2026 with a research loop that ran without human input, and [awesome-ai-for-economists](https://github.com/hanlulong/awesome-ai-for-economists) tracks the rest. The canonical reference — [Korinek's *AI Agents for Economic Research* (NBER w34202)](https://www.nber.org/papers/w34202) — explicitly frames today's agents as assistants under human oversight, not autonomous researchers.
 
+The end-to-end economics systems closest to this one, as their own papers and READMEs describe them:
+
+| System | What it does | What it leaves open |
+|---|---|---|
+| [Project APE](https://ape.socialcatalystlab.org) | Autonomous difference-in-differences and RDD policy evaluations, with [multi-model LLM review](https://github.com/SocialCatalystLab/ape-papers) and an LLM-judged tournament against AER/AEJ papers | No economist per paper: the research loop ran without human input, and independent verification (CRED) came after the production freeze |
+| [HLER](https://arxiv.org/abs/2603.07444) and [pAI-Econ-claude](https://arxiv.org/abs/2607.21268), by shared authors | Human-gated multi-agent pipelines: HLER for empirical work (OLS, fixed effects, DiD, event studies), pAI-Econ-claude for economic theory | HLER v1 leaves IV and RD designs to future work, and its reviewer scores come from the same LLM that writes the manuscript |
+| [Agentic Econ Lab](https://github.com/AgenticEconLab/agentic-econ-lab) ([Dawid et al.](https://arxiv.org/abs/2504.09736)) | Seven agent teams from ideation to reporting, with human-in-the-loop review at each stage and per-step provenance | Per its README, chained pipeline runs default to a committee of three LLMs at each checkpoint, and only that committee's vote can trigger a stage revision; a person's feedback at Estimation and Reporting is recorded but does not trigger one |
+
+What this project sets out to do differently: a referee gate that blocks each stage until the economist resolves or signs off on its serious findings, run by a different agent from the one that drafted; a shipped Stata engine ([stata-mcp](https://github.com/hanlulong/stata-mcp)); and a reproduction step scored against public benchmarks rather than our own grading (roadmap step 2).
+
 Three hard parts of empirical economics are where this project aims to go further:
 
 1. **Causal identification, not just estimation.** Some economics agents now seek out and state identification strategies.[^ident] This project is meant to choose a design and defend it against a dedicated attack on its assumptions — parallel trends, exclusion restrictions, RD manipulation. That judgment is what empirical economics is.
-2. **Referee-grade adversarial self-checking.** LLM error detection is uneven and can be gamed:[^cred][^spot][^gaming] paper–code inconsistencies remain the hardest errors to catch, and LLM reviewers rate the same economics paper higher when it is attributed to top male authors or elite institutions.[^bias] A system that attacks its own results — robustness, inference validity, external validity, provenance — before a human ever sees them is a real niche. We have already built that referee (see below).
+2. **Referee-grade adversarial self-checking.** LLM error detection is uneven and can be gamed:[^cred][^spot][^gaming] paper–code inconsistencies remain the hardest errors to catch, and LLM reviewers rate the same economics paper higher when it is attributed to top male authors or elite institutions.[^bias] Automated checking already exists: [Refine](https://www.refine.ink) reports use by journals of the American Economic Association and the Econometric Society, and APE built the CRED verifier.[^cred] The difference here is where the check sits and who controls it: a referee run by a different agent from the drafter attacks each result — robustness, inference validity, external validity, provenance — and blocks the stage until the economist resolves or signs off on every serious finding. We have already built that referee (see below).
 3. **The measured autonomy gap.** In the most direct evidence on replication work (Brodeur et al., *PNAS* 2026: 288 researchers in 103 teams; games run February–November 2024 with ChatGPT),[^pnas] 13 of 35 AI-led teams (37%; ChatGPT with minimal human oversight) completed the computational reproduction, against 31 of 33 human-only teams (94%). AI-assisted teams reproduced at a comparable rate (32 of 35) but found fewer than half as many major errors (0.74 vs 1.70 per team). Given only a paper's methods description and data, the three best-performing agents match coefficient signs 85–91% of the time on 48 I4R-verified papers, against 68% for always guessing positive, and the authors leave specification checks and falsification of identification assumptions to future work.[^kohler] That measured gap is what this project exists to close — deliberately, with the economist in charge.
 
 ## How it will earn your trust
